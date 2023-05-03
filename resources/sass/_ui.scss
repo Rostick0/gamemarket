@@ -1,0 +1,127 @@
+.a {
+    color: $default_color;
+    transition: 200ms;
+
+    &:hover {
+        color: $default_color_hover;
+    }
+
+    &:active {
+        color: $default_color_active;
+    }
+}
+
+.button {
+    background-color: $ui_color;
+    color: $default_color;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 20px;
+    transition: 200ms;
+
+    &:hover {
+        background-color: $ui_color_hover;
+    }
+
+    &:active {
+        background-color: $ui_color_active;
+    }
+}
+
+.input {
+    background-color: $input_background;
+    color: $default_color;
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    font-size: 16px;
+    padding: 12px;
+    transition: 200ms;
+
+    &:hover {
+        outline-color: $ui_color;
+    }
+
+    &:focus {
+        outline-color: $ui_color_hover;
+    }
+
+    &::placeholder {
+        color: $input_placeholder;
+    }
+}
+
+.label {
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 6px;
+
+    &__inputs {
+        display: flex;
+        column-gap: 10px;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.select {
+    color: $input_placeholder;
+
+    &:valid {
+        color: $default_color;
+    }
+
+    option {
+        color: $default_color;
+
+        &:checked {
+            background-color: $ui_color;
+        }
+
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    font-weight: 700;
+
+    &__item {
+        &._active {
+            color: $default-second_color;
+        }
+    }
+}
+
+._red {
+    color: $red_color;
+
+    &:hover {
+        color: $red_hover;
+    }
+
+    &:active {
+        color: $red_active;
+    }
+}
+
+
+.section-title {
+    margin-bottom: 16px;
+}
+
+.default-second-text {
+    color: $default-second_color;
+}
+
+
+
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1320px;
+}
