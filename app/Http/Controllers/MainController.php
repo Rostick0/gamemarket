@@ -16,12 +16,17 @@ class MainController extends Controller
             ->limit(10)
             ->get();
 
+        $games_free = Game::where('price', '=', 0)
+            ->limit(10)
+            ->get();
+
         $genres = DB::table('genres')->get() ?? [];
 
         return view('main', [
             'banner_game' => $banner_game,
             'genres' => $genres,
-            'games_new' => $games_new
+            'games_new' => $games_new,
+            'games_free' => $games_free
         ]);
     }
 }
